@@ -2,6 +2,7 @@
 
 import {Route} from "react-router-dom";
 import Header from './components/Header';
+import React from "react";
 import Home from './pages/Home';
 import Drawer from './components/Drawer';
 import Favorites from "./pages/Favorites";
@@ -18,10 +19,12 @@ const arr=[
 
 
 function App() {  
+  const [cartOpened,setCartOpened]= React.useState(false);
   return (
 <div className="wrapper">
-  <Drawer/>
-  <Header/>
+
+  {cartOpened ? <Drawer onClose={()=>setCartOpened(false)}/>:null }
+  <Header onClickCart={()=>setCartOpened(true)}/>
     <Route path="/" exact>
       <Home arr={arr}/>
     </Route>

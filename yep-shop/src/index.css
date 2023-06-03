@@ -198,7 +198,7 @@ text-align: center;
   justify-content: space-between;
 }
 .overlay{
-  display: none;
+  
   position: absolute;
   left: 0;
   top: 0;
@@ -233,6 +233,13 @@ color: white;
 .cartItem div{
   margin-right:20px;
 } 
+.CartBtn{
+  cursor: pointer;
+}
+.CloseBtn{
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+}
 .RemoveButton{
   margin-left: 20px;
   cursor: pointer;
@@ -294,6 +301,10 @@ height: 50px;
 }
 .GamePage h2{
   display:block;
+}
+.GamePage p{
+  display:flex;
+
 }
 .GamePage button{
   height: 50px;

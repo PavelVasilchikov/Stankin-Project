@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-function Header(){
+function Header(props){
 return(
     <header>
 <div className="headerLeft">
@@ -29,10 +29,9 @@ return(
     <span> Profile </span>
     </Link>
     </li>
-    <li>
-    
-    <span> Cart </span>
-    </li>
+    <li onClick={props.onClickCart}>
+    <span className="CartBtn"> Cart </span>
+    </li >
     <li>
     <Link to="/favorites" className="links">
     <span> Favorites </span>
