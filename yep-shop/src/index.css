@@ -1,0 +1,316 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Viga', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.wrapper
+{
+  width: 1920px;
+  height: 955px;
+  background: linear-gradient(180deg, #9BF9FF 0%, rgba(37, 34, 152, 0.12) 82.29%);
+}
+header{ 
+ 
+align-items: center;
+width: 1920px;
+height: 98.99px;
+left: 0px;
+top: -0.11px;
+background: #FDFDFD;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+ } 
+
+
+.headerLeft h3{
+  font-size: 48px;
+  text-decoration: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  justify-content: space-between;
+}
+.headerRight li{
+
+
+  font-size: 30px;
+
+ padding: 20px;
+}
+.headerRight{
+ 
+
+  display: flex;
+  justify-content: space-between;
+  list-style-type:none;
+}
+.content h1{
+padding-top: 10px;
+text-align: center;
+}
+.card{
+
+  margin-top: 35px;
+  background-color: black;
+
+  transform-style: preserve-3d;
+  overflow: hidden;
+  
+  margin-left: 9%;
+
+  max-width:415px;
+  max-height:304px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+ }
+ .card button{
+  
+
+  padding: 0px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border:0;
+  max-width:415px;
+  max-height:304px;
+  font-size: 18px;
+  font-family:'Viga';
+  cursor: pointer;
+  display: flex;
+  
+ 
+ }
+
+ .card:hover img{
+
+  -webkit-transform: scale(1.1) ; 
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+ }
+
+ .card img{
+  max-width:415px;
+  max-height:304px;
+  object-fit: cover;
+  transition: transform 0.5s;
+ }
+
+ .card s{
+  margin: 10px;
+ }
+
+.card p{
+  color: white;
+  margin: 10px;
+}
+
+ .price{
+
+  bottom: 8px;
+  right: 16px;
+  margin-bottom: 10px;
+  width: 121px;
+  height: 22.22px;
+  background-color: #5498FE;
+  display:flex;
+  align-items: center;
+  border-radius:  15px;
+  position: absolute;
+  bottom:0px;
+  text-align: center;
+ }
+
+ .games{
+  display: flex;
+  flex-wrap: wrap
+}
+
+.search-block input{
+  width: 200px;
+  border: 0;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+  outline:none;
+  width: 627px;
+  height: 48.51px;
+  left: 373px;
+  top: 23.65px;
+  background: #D9D9D9;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family:'Viga';
+  padding: 0 10px;
+}
+.search-block {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background-color: #D9D9D9;
+  margin-left: 50px;
+  border-radius: 15px;
+}
+.search-block img{
+  
+  width: 19px;
+  height: 19px;
+  left: 382px;
+  top: 38px;
+}
+
+.search-block ::placeholder {
+  font-size: 20px;
+  font-family:'Viga';
+}
+
+.headerLeft{
+  display: flex;
+  align-items: center;
+}
+.drawer{
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  position: absolute;
+  background-color:hsl(224, 6%, 64%) ;
+  right: 0px;
+  height: 100%;
+  box-shadow: -10px 4px 24px rgba(0, 0,0, 0.1);
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+.drawer h2{
+  margin-top: 20px;
+  font-family:'Viga';
+  margin-bottom: 20px; 
+  font-size: 30px; 
+  display:flex;
+  justify-content: space-between;
+}
+.overlay{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 955px;
+  background-color: rgba(0, 0,0, 0.5);
+  z-index: 1;
+}
+.cartItem{
+border: 1px solid black;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color:#5498FE ;
+
+}
+.cartItem p{
+margin-bottom: 5px;
+
+margin-top: 5px;
+font-size: 20px;
+color: white;
+}
+
+
+.cartItem img{
+  margin-right:20px;
+  
+}
+.cartItem div{
+  margin-right:20px;
+} 
+.RemoveButton{
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+}
+.liSumm{
+  display:flex;
+  margin-bottom: 20px;
+  font-size: 20px;
+  align-items: flex-end;
+}
+.divSumm{
+  height: 1px;
+  border-bottom: 1px dashed #dfdfdf;
+  position: relative;
+  top:-4px;
+  margin: 0 7px;
+  flex:1;
+}
+.liTax{
+  
+  align-items: flex-end;
+  font-size: 20px;
+  margin-bottom: 30px;
+  display: flex;
+}
+.divTax{
+  height: 1px;
+  border-bottom: 1px dashed #dfdfdf;
+  position: relative;
+  top:-4px;
+  margin: 0 7px;
+  flex:1;
+}
+.cartItems{
+  flex: 1;
+  overflow: auto;
+}
+.OrderBtn{
+
+  width: 100%;
+  height: 55px;
+  border: 0;
+  font-size: 22px;
+  background: #5498FE;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Viga';
+  cursor: pointer;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+.links{
+  text-decoration: none;
+  color: black;
+}
+.FavImg{
+height: 50px;
+}
+.GamePage h2{
+  display:block;
+}
+.GamePage button{
+  height: 50px;
+  border-radius:15px;
+  background-color: white;
+  
+  }
+.GamePage button{
+  
+  
+  
+  border: 0;
+  cursor: pointer;
+  border-radius:15px;
+  background-color: white
+}
+.GamePage{
+ 
+  margin-left: 5%;
+}
