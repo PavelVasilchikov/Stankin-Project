@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\yep-shop\\public",
+    "\\yep-shop\\src",
+    "\\yep-shop\\src\\components"
   ],
-  "SelectedNode": "\\Новая папка",
+  "SelectedNode": "\\yep-shop",
   "PreviewInSolutionExplorer": false
 }
