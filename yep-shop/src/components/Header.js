@@ -1,23 +1,28 @@
 import {Link} from "react-router-dom";
-function Header(props){
+function Header(props,{onChangeSearchInput} ){
 return(
+
     <header>
 <div className="headerLeft">
   <div> 
-  <Link to="/" className="links">
+  <a href="/" className="links">
     <h3>YEP <img  src="/img/logo.png"/> </h3>
-    </Link>
+    </a>
   </div>
+
+
   <div className="search-block">
     <img src="/img/search.svg" alt="search"/>
-    <input placeholder="Search..."/>
+    <input  onChange={onChangeSearchInput} placeholder="Search..."/>
   </div>
+
+
 </div>
   <ul className="headerRight">
     <li>
-    <Link to="/" className="links">
+    <a href="/" className="links">
     <span> Home </span>
-    </Link>
+    </a>
     </li>
     <li>
       <Link to="/products" className="links">

@@ -1,23 +1,27 @@
 
-function GamePage(props){
+function GamePage({GameDescription,Game}){
 return(
 <div className="content">
         <h1> gamename</h1>
-<body>
+
 
   <div class="GamePage">
     <h2>Название товара</h2>
-    <img src="/img/1.png "alt="Изображение товара"/>
+    <img src={Game.imageUrl} alt="Изображение товара"/>
+   
     <p>Описание товара.</p>
-    <p> Price:  <s>{props.altprice}2p</s>
-    <p>{props.price}2p</p> </p>
+     {GameDescription.map((obj)=>( 
+            <p>
+            Description:{obj.description};
+            </p>
+             ))} 
    
     <button>Купить</button>
    
-    <button><img className="FavImg" src="/img/empty-heart.png "alt="Изображение товара"/></button>
+    <button><img className="FavImg" src="/img/empty-heart.png "alt=""/></button>
   </div>
 
-</body>
+
 </div>
 );
 }
