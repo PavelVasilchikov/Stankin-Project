@@ -5,9 +5,9 @@ return(
     <header>
 <div className="headerLeft">
   <div> 
-  <a href="/" className="links">
+  <Link to="/" className="links">
     <h3>YEP <img  src="/img/logo.png"/> </h3>
-    </a>
+    </Link>
   </div>
 
 
@@ -20,9 +20,9 @@ return(
 </div>
   <ul className="headerRight">
     <li>
-    <a href="/" className="links">
+    <Link to="/" className="links">
     <span> Home </span>
-    </a>
+    </Link>
     </li>
     <li>
       <Link to="/products" className="links">
@@ -34,14 +34,15 @@ return(
     <span> Profile </span>
     </Link>
     </li>
+
     <li onClick={props.onClickCart}>
     <span className="CartBtn"> Cart </span>
     </li >
-    <li>
-    <Link to="/favorites" className="links">
+
+    <li onClick={props.onClickFav}>
     <span> Favorites </span>
-    </Link>
     </li>
+
   </ul>
 </header>
 );

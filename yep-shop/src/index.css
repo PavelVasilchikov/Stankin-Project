@@ -43,7 +43,7 @@ background: #FDFDFD;
 }
 .headerRight li{
 
-
+  cursor: pointer;
   font-size: 30px;
 
  padding: 20px;
@@ -297,31 +297,71 @@ color: white;
   color: black;
 }
 .FavImg{
+cursor: pointer;
 height: 50px;
 }
-.GamePage h2{
-  display:block;
+.Price p{
+  
+  color: white;
 }
-.GamePage p{
-  display:flex;
 
+  .GameImg{
+    margin-right:  50px;
+    }
+
+.GamePage p,s{
+  font-size: 22px;
+  margin: 10px;
 }
-.GamePage button{
-  height: 50px;
-  border-radius:15px;
-  background-color: white;
+.GamePage{
   
-  }
-.GamePage button{
-  
-  
-  
+  margin-left: 5%;
+}
+.GameBlock{
+  margin-right: 40px;
+  display:flex;
+}
+
+.FavBlock{
+ 
+  margin-top: 20px;
+  display: flex;
+}
+.FavBtn{
+ 
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
   border: 0;
   cursor: pointer;
   border-radius:15px;
-  background-color: white
+  width: 60px;
+background-color: white;
 }
-.GamePage{
+
+
+.BuyBtn{
+
+  align-items: center;
+  font-size: 22px;
+  border: 0;
+  cursor: pointer;
+  border-radius:15px;
+  width: 120px;
  
-  margin-left: 5%;
+  
+  background-color: white;
+}
+
+
+
+.Price{
+  margin-right: 40px;
+  width: 180px;
+  margin-left: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color:#5498FE ;
+  border-radius: 15px;
+  display: flex;
 }

@@ -1,10 +1,7 @@
 import {Link} from "react-router-dom";
 function Card(props){
 
-    const onClickButton=()=>{
    
-    };
-
     return(
     <div className="card" > 
     <Link to="/gamepage" className="links"> 
