@@ -1,10 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\backend",
+    "\\backend\\Yep-Shop_back",
+    "\\backend\\Yep-Shop_back\\bin",
+    "\\backend\\Yep-Shop_back\\obj",
     "\\yep-shop\\public",
     "\\yep-shop\\src",
     "\\yep-shop\\src\\components"
   ],
-  "SelectedNode": "\\yep-shop",
+  "SelectedNode": "\\backend\\Yep-Shop_back\\obj\\Release",
   "PreviewInSolutionExplorer": false
 }
