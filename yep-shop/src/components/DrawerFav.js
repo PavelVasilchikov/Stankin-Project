@@ -11,7 +11,7 @@ function DrawerFav({onClose,items=[]}){
             <div className="cartItem">
             <img width={180} height={130}  src={obj.imageUrl} alt=""/>
             <div>
-              <p>{obj.tittle} </p>
+              <p>{obj.title} </p>
               <p>{obj.price}</p>
             </div>
             <img className="RemoveButton" src="img/delete-btn.svg" alt=""/>
@@ -24,7 +24,7 @@ function DrawerFav({onClose,items=[]}){
       
   
         </div>
-        <div сlassName="cartTotalBlock">
+        {/* <div сlassName="cartTotalBlock">
         <ul>
           <li className="liSumm">
             <span>Summ: </span>
@@ -38,7 +38,7 @@ function DrawerFav({onClose,items=[]}){
           </li>
           <button className="OrderBtn"> Confirm Order</button>
         </ul>
-        </div>
+        </div> */}
         
   
       </div>

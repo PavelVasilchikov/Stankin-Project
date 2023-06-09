@@ -3,7 +3,7 @@ function Card(props){
 
    
     return(
-    <div className="card" > 
+    <div className="card"  > 
     <Link to="/gamepage" className="links"> 
     <button> 
     <img src={props.imageUrl} alt=""/>

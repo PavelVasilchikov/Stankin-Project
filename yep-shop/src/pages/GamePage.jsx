@@ -10,8 +10,8 @@ function GamePage({GameDescription,Game}){
 
 return(
  
-<div className="content">
-        <h1> {Game.tittle}</h1>
+<div className="GamePageСontent">
+        <h1> {Game.title}</h1>
 
 
   <div class="GamePage">
@@ -37,7 +37,7 @@ return(
     <button className="FavBtn">
     <img className="FavImg" onClick={onClickFavBtn} src={isFav?"/img/fh.png":"/img/eh.png "}alt=""/> 
     </button>
-    {/* src="/img/empty-heart.png " */}
+  
     <button className="BuyBtn">Add to cart</button>
   
     </div>

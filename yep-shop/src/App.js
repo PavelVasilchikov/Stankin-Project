@@ -19,8 +19,11 @@ import { useEffect } from "react";
 function App() {  
   const [searchValue,setSearchValue]= React.useState('');
 const onChangeSearchInput=(event)=>{
-setSearchValue();
+  
+  setSearchValue(event.target.value);
 } 
+
+ 
   const [favItems,setFavItems]= React.useState([]);
 
   const [saleItems,setSaleItems]= React.useState([]);
@@ -53,15 +56,15 @@ setSearchValue();
   return (
 
 
-<div className="wrapper">
+<div className="">
 
   {cartOpened ? <Drawer onClose={()=>setCartOpened(false)}/>:null }
   {favOpened ? <DrawerFav items={favItems} onClose={()=>setFavOpened(false)}/>:null }
-  <Header onChangeSearchInput={onChangeSearchInput} onClickCart={()=>setCartOpened(true)} onClickFav={()=>setFavOpened(true)}/>
+  <Header onChangeSearch={onChangeSearchInput} onClickCart={()=>setCartOpened(true)} onClickFav={()=>setFavOpened(true)}/>
   <Routes>
 
  
-    <Route path="/" element={<Home saleItems={saleItems} onGameClick={handleGameClick}/>}>
+    <Route path="/" element={<Home saleItems={saleItems}  onGameClick={handleGameClick} searchValue={searchValue}/>}>
       
     </Route>
 

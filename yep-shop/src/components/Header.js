@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-function Header(props,{onChangeSearchInput} ){
+function Header(props ){
 return(
 
     <header>
@@ -13,7 +13,7 @@ return(
 
   <div className="search-block">
     <img src="/img/search.svg" alt="search"/>
-    <input  onChange={onChangeSearchInput} placeholder="Search..."/>
+    <input  onChange={props.onChangeSearch} placeholder="Search..."/>
   </div>
 
 
