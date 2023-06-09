@@ -1,0 +1,20 @@
+{
+  "SerializedFilePath": "d:\\Git\\PavelVasilchikov\\Stankin-Project\\backend\\Yep-Back\\Yep-Back\\obj\\Debug\\netcoreapp2.0\\netcoreapp2.0\\project.razor.json",
+  "FilePath": "d:\\Git\\PavelVasilchikov\\Stankin-Project\\backend\\Yep-Back\\Yep-Back\\Yep-Back.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "6.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "Yep_Back",
+  "Documents": [],
+  "SerializationFormat": "0.3"
+}

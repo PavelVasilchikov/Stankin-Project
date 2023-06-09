@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
  
 }
 
@@ -14,8 +15,9 @@ code {
 }
 .wrapper
 {
-  width: 1920px;
-  height: 955px;
+  width: 100%;
+  overflow:hidden;
+  height: 920px;
   background: linear-gradient(180deg, #9BF9FF 0%, rgba(37, 34, 152, 0.12) 82.29%);
 }
 header{ 
@@ -61,13 +63,14 @@ text-align: center;
 }
 .card{
 
-  margin-top: 35px;
+  margin-top: 20px;
   background-color: black;
 
   transform-style: preserve-3d;
   overflow: hidden;
   
   margin-left: 9%;
+  margin-bottom: 40px;
 
   max-width:415px;
   max-height:304px;
