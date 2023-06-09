@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Yep_Back.Models;
-using Microsoft.AspNetCore.Mvc;
-using ReactApi.Data;
 
-namespace ReactApi.Controllers
+namespace Yep_Back.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -43,7 +41,7 @@ namespace ReactApi.Controllers
             _context.User.Add(user);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(GetById), new { id = user.IdUser}, user);
+            return CreatedAtAction(nameof(GetById), new { id = user.IdUser }, user);
         }
 
         [HttpPut("{id}")]

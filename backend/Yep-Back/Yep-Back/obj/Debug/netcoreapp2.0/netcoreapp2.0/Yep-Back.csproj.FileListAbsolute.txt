@@ -1,0 +1,5 @@
+D:\Git\PavelVasilchikov\Stankin-Project\backend\Yep-Back\Yep-Back\obj\Debug\netcoreapp2.0\netcoreapp2.0\Yep-Back.csproj.AssemblyReference.cache
+D:\Git\PavelVasilchikov\Stankin-Project\backend\Yep-Back\Yep-Back\obj\Debug\netcoreapp2.0\netcoreapp2.0\Yep-Back.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\PavelVasilchikov\Stankin-Project\backend\Yep-Back\Yep-Back\obj\Debug\netcoreapp2.0\netcoreapp2.0\Yep-Back.AssemblyInfoInputs.cache
+D:\Git\PavelVasilchikov\Stankin-Project\backend\Yep-Back\Yep-Back\obj\Debug\netcoreapp2.0\netcoreapp2.0\Yep-Back.AssemblyInfo.cs
+D:\Git\PavelVasilchikov\Stankin-Project\backend\Yep-Back\Yep-Back\obj\Debug\netcoreapp2.0\netcoreapp2.0\Yep-Back.csproj.CoreCompileInputs.cache
