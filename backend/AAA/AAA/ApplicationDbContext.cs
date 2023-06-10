@@ -6,6 +6,7 @@ public class ApplicationDbContext : DbContext
 {
     public DbSet<User> UserLogin { get; set; } = null!;
     public DbSet<GameCart> GameCart { get; set; } = null!;
+    public DbSet<GameDescription> GameDescription { get; set; } = null!;
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
@@ -16,8 +17,7 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-
-        optionsBuilder.UseSqlServer(@"Server=localhost;Database=Users;Trusted_Connection=True;");
-
+        optionsBuilder.UseSqlServer("Server=localhost;Database=Users;Trusted_Connection=True; TrustServerCertificate=true");
+        
     }
 }
