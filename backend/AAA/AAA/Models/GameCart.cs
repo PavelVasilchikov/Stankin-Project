@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AAA.Models
 {
-    [Table("GameCart")]
+    [Table("gameSale")]
     public class GameCart
     {
         [Key]

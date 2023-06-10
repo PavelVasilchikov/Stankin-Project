@@ -45,22 +45,14 @@ const onChangeSearchInput=(event)=>{
   const [saleItems,setSaleItems]= React.useState([]);
   const [GameDescription,SetGameDescription]= React.useState([]);
   const [Description,SetDescription]= React.useState([]);
-  React.useEffect(() => {
 
-<<<<<<< HEAD
+  React.useEffect(() => {
     axios.get('https://localhost:7245/api/GameCart').then((res) => {setSaleItems(res.data);
-=======
-      axios.get('https://localhost:7245/api/GameCart').then((res) => {setSaleItems(res.data);
->>>>>>> 494907d (aaaa)
     });
 
 }, []);
  React.useEffect(() => {
-<<<<<<< HEAD
     axios.get('https://localhost:7245/api/GameDescriptions').then((res) => {SetGameDescription(res.data);
-=======
-     axios.get('https://localhost:7245/api/GameDescriptions').then((res) => {SetGameDescription(res.data);
->>>>>>> 494907d (aaaa)
     });
 
 }, []);
