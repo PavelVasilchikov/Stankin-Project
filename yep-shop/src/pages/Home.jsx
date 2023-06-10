@@ -7,7 +7,7 @@ return(
         {/* <h1> Best offers</h1> */} 
          <div className="games">
          
-           {saleItems.filter(game=>game.title.toLowerCase().includes(searchValue))
+           {saleItems.filter(game=>game.title.toLowerCase().includes(searchValue.toLowerCase()))
             .map((game)=>(
             
              <div className="card" onClick={()=>onGameClick(game)}> 

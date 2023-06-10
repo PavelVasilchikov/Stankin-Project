@@ -99,7 +99,7 @@ margin-bottom: 35px;
   border:0;
   max-width:415px;
   max-height:304px;
-  font-size: 18px;
+ 
   font-family:'Viga';
   cursor: pointer;
   display: flex;
@@ -122,10 +122,14 @@ margin-bottom: 35px;
  }
 
  .card s{
+  font-family:'Viga';
+  font-size: 19px;
   margin: 10px;
  }
 
 .card p{
+  font-family:'Viga';
+  font-size: 19px;
   color: white;
   margin: 10px;
 }
