@@ -1,0 +1,84 @@
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\appsettings.Development.json
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\appsettings.json
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\AAA.exe
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\AAA.deps.json
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\AAA.runtimeconfig.json
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\AAA.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\AAA.pdb
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.csproj.AssemblyReference.cache
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.GeneratedMSBuildEditorConfig.editorconfig
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.AssemblyInfoInputs.cache
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.AssemblyInfo.cs
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.csproj.CoreCompileInputs.cache
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.MvcApplicationPartsAssemblyInfo.cs
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.MvcApplicationPartsAssemblyInfo.cache
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\staticwebassets.build.json
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\staticwebassets.development.json
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\scopedcss\bundle\AAA.styles.css
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.csproj.CopyComplete
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\refint\AAA.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.pdb
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\AAA.genruntimeconfig.cache
+D:\Stankin programming\Semestr 4\AAA\AAA\obj\Debug\net6.0\ref\AAA.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Azure.Core.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Azure.Identity.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Stankin programming\Semestr 4\AAA\AAA\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.csproj.AssemblyReference.cache
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.AssemblyInfoInputs.cache
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.AssemblyInfo.cs
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.dll
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\refint\AAA.dll
+C:\Users\Admin\Stankin-Project\backend\AAA\AAA\obj\Debug\net6.0\AAA.pdb
