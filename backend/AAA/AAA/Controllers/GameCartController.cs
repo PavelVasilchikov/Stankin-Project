@@ -41,22 +41,22 @@ namespace AAA.Controllers
 
         // PUT: api/GameCart/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateGameCartItem(int id, GameCart gameCartItem)
+        public IActionResult PutUser(int id, GameCart gameCart)
         {
-            if (id != gameCartItem.id)
+            if (id != gameCart.id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(gameCartItem).State = EntityState.Modified;
+            _context.Entry(gameCart).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!GameCartItemExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -67,6 +67,11 @@ namespace AAA.Controllers
             }
 
             return NoContent();
+        }
+
+        private bool UserExists(int id)
+        {
+            return _context.GameCart.Any(e => e.id == id);
         }
 
         // POST: api/GameCart
@@ -91,6 +96,7 @@ namespace AAA.Controllers
 
             _context.GameCart.Remove(gameCartItem);
             await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
             return NoContent();
         }
@@ -99,5 +105,6 @@ namespace AAA.Controllers
         {
             return _context.GameCart.Any(e => e.id == id);
         }
+
     }
 }
