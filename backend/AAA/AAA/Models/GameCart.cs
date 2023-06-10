@@ -9,7 +9,7 @@ namespace AAA.Models
         [Key]
         public int? id { get; set; }
         [Required]
-        public string? tittle { get; set; }
+        public string? title { get; set; }
         [Required]
         public string? price { get; set; }
         [Required]

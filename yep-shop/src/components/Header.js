@@ -35,12 +35,16 @@ return(
     </Link>
     </li>
 
-    <li onClick={props.onClickCart}>
+    <li>
+    <Link to="/cart" className="links">
     <span className="CartBtn"> Cart </span>
+    </Link>
     </li >
 
-    <li onClick={props.onClickFav}>
+    <li >
+    <Link to="/favorites" className="links">
     <span> Favorites </span>
+    </Link>
     </li>
 
   </ul>

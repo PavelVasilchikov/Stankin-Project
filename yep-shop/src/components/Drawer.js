@@ -1,38 +1,25 @@
-function Drawer(props){
+function Drawer({onClose,items=[]}){
     return(
         <div className="overlay">
         <div className="drawer">
-        <h2> Cart <img onClick={props.onClose} width={40} height={40} className="CloseBtn" src="img/close-btn.svg" alt=""/></h2>
+        <h2> Cart <img onClick={onClose} width={40} height={40} className="CloseBtn" src="img/close-btn.svg" alt=""/></h2>
        
+
+
         <div className="cartItems">
-          
+        {items.map((obj)=>(
           <div className="cartItem">
-          <img width={180} height={130}  src="img/1.png" alt=""/>
+          <img width={180} height={130}  src={obj.imageUrl} alt=""/>
           <div>
-            <p> Satisfactory </p>
-            <p>300p</p>
+            <p> {obj.title} </p>
+            <p>{obj.price}</p>
           </div>
           <img className="RemoveButton" src="img/delete-btn.svg" alt=""/>
-        </div>
-        <div className="cartItem">
-          <img width={180} height={130}  src="img/1.png" alt=""/>
-          <div>
-            <p> Satisfactory </p>
-            <p>300p</p>
           </div>
-          <img className="RemoveButton" src="img/delete-btn.svg" alt=""/>
+        ))}
         </div>
-  
-        <div className="cartItem">
-          <img width={180} height={130}  src="img/1.png" alt=""/>
-          <div>
-            <p> Satisfactory </p>
-            <p>300p</p>
-          </div>
-          <img className="RemoveButton" src="img/delete-btn.svg" alt=""/>
-        </div>
-  
-        </div>
+
+
         <div сlassName="cartTotalBlock">
         <ul>
           <li className="liSumm">

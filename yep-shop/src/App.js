@@ -9,6 +9,7 @@ import DrawerFav from './components/DrawerFav';
 import Favorites from "./pages/Favorites";
 import Products from "./pages/Products";
 import GamePage from "./pages/GamePage";
+import Cart from "./pages/Cart";
 import axios from "axios";
 import { useEffect } from "react";
 
@@ -26,17 +27,32 @@ const onChangeSearchInput=(event)=>{
  
   const [favItems,setFavItems]= React.useState([]);
 
+  const [cartItems,setCartItems]= React.useState([ {
+    "id": 1,
+    "title": "Satisfactory",
+    "price": "399",
+    "altprice": "699",
+    "imageUrl": "/img/1.png"
+  },
+  {
+    "id": 2,
+    "title": "Counter-Strike",
+    "price": "399",
+    "altprice": "699",
+    "imageUrl": "/img/2.png"
+  }]);
+
   const [saleItems,setSaleItems]= React.useState([]);
   const [GameDescription,SetGameDescription]= React.useState([]);
   const [Description,SetDescription]= React.useState([]);
   React.useEffect(() => {
 
-    axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/SaleItems').then((res) => {setSaleItems(res.data);
+    axios.get('https://localhost:7245/api/GameCart').then((res) => {setSaleItems(res.data);
     });
 
 }, []);
  React.useEffect(() => {
-    axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/GameDescription').then((res) => {SetGameDescription(res.data);
+    axios.get('https://localhost:7245/api/GameDescriptions').then((res) => {SetGameDescription(res.data);
     });
 
 }, []);
@@ -47,7 +63,7 @@ const onChangeSearchInput=(event)=>{
     // };
     const handleGameClick = (game) => {
       setSelectedGame(game);
-      SetDescription(GameDescription.filter(item => item.gameid === game.id));
+      SetDescription(GameDescription.filter(item => item.gameId === game.id));
    
     };
 
@@ -58,9 +74,9 @@ const onChangeSearchInput=(event)=>{
 
 <div className="">
 
-  {cartOpened ? <Drawer onClose={()=>setCartOpened(false)}/>:null }
-  {favOpened ? <DrawerFav items={favItems} onClose={()=>setFavOpened(false)}/>:null }
-  <Header onChangeSearch={onChangeSearchInput} onClickCart={()=>setCartOpened(true)} onClickFav={()=>setFavOpened(true)}/>
+ 
+
+  <Header onChangeSearch={onChangeSearchInput} />
   <Routes>
 
  
@@ -75,6 +91,13 @@ const onChangeSearchInput=(event)=>{
 
     <Route path="/gamepage" element={ selectedGame && <GamePage GameDescription={Description} Game={selectedGame}/>}>
     </Route>
+
+    <Route path="/cart" element={ <Cart items={cartItems} />}>
+    </Route>
+
+
+
+
     </Routes>
     </div>
   );

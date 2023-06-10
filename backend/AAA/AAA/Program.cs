@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using AAA.Models;
+
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 
@@ -52,5 +53,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("ReactJSDomain");
 
 app.Run();

@@ -1,9 +1,11 @@
 import React from "react";
+import Favorites from "./Favorites";
 function GamePage({GameDescription,Game}){
  
 
   const[isFav,setIsAddFav]=React.useState(false);
   const onClickFavBtn=()=>{
+   
     setIsAddFav(!isFav);
   }
  
