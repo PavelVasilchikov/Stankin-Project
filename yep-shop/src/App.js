@@ -65,8 +65,8 @@ const onChangeSearchInput=(event)=>{
   const [saleItems,setSaleItems]= React.useState([]);
   const [GameDescription,SetGameDescription]= React.useState([]);
   const [Description,SetDescription]= React.useState([]);
-  React.useEffect(() => {
 
+  React.useEffect(() => {
     axios.get('https://localhost:7245/api/GameCart').then((res) => {setSaleItems(res.data);
     });
 

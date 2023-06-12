@@ -3,17 +3,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AAA.Models
 {
-    [Table("GameCart")]
-    public class GameCart
+    [Table("gameSale")]
+    public class GameCard
     {
         [Key]
         public int? id { get; set; }
         [Required]
         public string? title { get; set; }
         [Required]
-        public string? price { get; set; }
+        public long? price { get; set; }
         [Required]
-        public string? altprice { get; set; }
+        public long? altprice { get; set; }
         [Required]
         public string? imageUrl { get; set; }
 
