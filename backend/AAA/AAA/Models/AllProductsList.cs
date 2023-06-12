@@ -7,17 +7,17 @@ namespace AAA.Models
     public class AllProductsList
     {
         [Key]
-        public int? gameId { get; set; }
+        public int GameId { get; set; }
         [Required]
-        public string? gameName { get; set; }
+        public string? GameName { get; set; }
         [Required]
-        public long? price { get; set; }
+        public long Price { get; set; }
         [Required]
-        public long? altprice { get; set; }
+        public long Altprice { get; set; }
         [Required]
-        public string? tag { get; set; }
+        public string? Tag { get; set; }
         [Required]
-        public string? description { get; set; }
+        public string? Description { get; set; }
 
     }
 }
