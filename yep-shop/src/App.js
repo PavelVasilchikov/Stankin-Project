@@ -26,21 +26,41 @@ const onChangeSearchInput=(event)=>{
 
  
   const [favItems,setFavItems]= React.useState([]);
+  const onAddToFav=(obj)=>{
+    axios.post('https://647b4e51d2e5b6101db11d2d.mockapi.io/favorites',obj);
+    setFavItems(prev=>[...prev,obj]);
+  }
 
-  const [cartItems,setCartItems]= React.useState([ {
-    "id": 1,
-    "title": "Satisfactory",
-    "price": "399",
-    "altprice": "699",
-    "imageUrl": "/img/1.png"
-  },
-  {
-    "id": 2,
-    "title": "Counter-Strike",
-    "price": "399",
-    "altprice": "699",
-    "imageUrl": "/img/2.png"
-  }]);
+  const onRemoveFavorites=(id)=>{
+   
+    axios.delete(`https://647b4e51d2e5b6101db11d2d.mockapi.io/favorites/${id}`);  
+    setFavItems(prev=>prev.filter(item=>item.id!=id));
+
+  }
+
+
+  const [cartItems,setCartItems]= React.useState([]);
+
+  const onAddToCart=(obj)=>{
+    obj.counter=1;
+    console.log(obj.counter);
+    console.log(typeof obj.counter);
+    axios.post('https://647b4e51d2e5b6101db11d2d.mockapi.io/cart',obj);
+  
+    setCartItems([...cartItems,obj]);
+  }
+
+  const onRemoveCart=(id)=>{
+   
+    axios.delete(`https://647b4e51d2e5b6101db11d2d.mockapi.io/cart/${id}`);  
+    setCartItems(prev=>prev.filter(item=>item.id!=id));
+
+  }
+
+
+
+
+
 
   const [saleItems,setSaleItems]= React.useState([]);
   const [GameDescription,SetGameDescription]= React.useState([]);
@@ -56,6 +76,23 @@ const onChangeSearchInput=(event)=>{
     });
 
 }, []);
+
+React.useEffect(() => {
+  axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/cart').then((res) => {setCartItems(res.data);
+  });
+
+}, []);
+
+React.useEffect(() => {
+  axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/favorites').then((res) => {setFavItems(res.data);
+  });
+
+}, []);
+
+
+
+
+
    const [selectedGame, setSelectedGame] = React.useState(null);
     //  const handleGameClick = (saleItems) => {
     //     setSelectedGame(saleItems);
@@ -67,8 +104,7 @@ const onChangeSearchInput=(event)=>{
    
     };
 
-  const [cartOpened,setCartOpened]= React.useState(false);
-  const [favOpened,setFavOpened]= React.useState(false);
+
   return (
 
 
@@ -84,15 +120,15 @@ const onChangeSearchInput=(event)=>{
       
     </Route>
 
-    <Route path="/favorites" element={<Favorites/>}>
+    <Route path="/favorites" element={<Favorites items={favItems} onRemoveFav={onRemoveFavorites} />}>
     </Route>
     <Route path="/products" element={<Products saleItems={saleItems} onGameClick={handleGameClick}/>}>
     </Route>
 
-    <Route path="/gamepage" element={ selectedGame && <GamePage GameDescription={Description} Game={selectedGame}/>}>
+    <Route path="/gamepage" element={ selectedGame && <GamePage GameDescription={Description} title={selectedGame.title} price={selectedGame.price} imageUrl={selectedGame.imageUrl} altprice={selectedGame.altprice}  onClickBuyBtn={(obj)=>onAddToCart(obj)}  onClickFavBtn={(obj)=>onAddToFav(obj)}/>}>
     </Route>
 
-    <Route path="/cart" element={ <Cart items={cartItems} />}>
+    <Route path="/cart" element={ <Cart items={cartItems} onRemoveBuy={onRemoveCart} />}>
     </Route>
 
 

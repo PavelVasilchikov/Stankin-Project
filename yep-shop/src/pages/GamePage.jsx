@@ -1,11 +1,16 @@
 import React from "react";
 import Favorites from "./Favorites";
-function GamePage({GameDescription,Game}){
+function GamePage({GameDescription,title,altprice,imageUrl,price,onClickBuyBtn,onClickFavBtn}){
  
+  const[isAdd,setIsAdd]=React.useState();
+const onClickBuy=()=>{
+  onClickBuyBtn({title,price,imageUrl});
+}
+
 
   const[isFav,setIsAddFav]=React.useState(false);
-  const onClickFavBtn=()=>{
-   
+  const onClickFav=()=>{
+    onClickFavBtn({title,price,imageUrl})
     setIsAddFav(!isFav);
   }
  
@@ -13,14 +18,14 @@ function GamePage({GameDescription,Game}){
 return(
  
 <div className="GamePageСontent">
-        <h1> {Game.title}</h1>
+        <h1> {title}</h1>
 
 
   <div class="GamePage">
    <div className="GameBlock">
 
    
-    <img className="GameImg" width={500} height={400} src={Game.imageUrl} alt="Изображение товара"/>
+    <img className="GameImg" width={500} height={400} src={imageUrl} alt="Изображение товара"/>
    
    
      {GameDescription.map((obj)=>( 
@@ -32,15 +37,15 @@ return(
    
     <div className="FavBlock">
       <div className="Price" >
-      <s>{Game.altprice}p</s>
-      <p>{Game.price}p</p>
+      <s>{altprice}p</s>
+      <p>{price}p</p>
       </div>
    
     <button className="FavBtn">
-    <img className="FavImg" onClick={onClickFavBtn} src={isFav?"/img/fh.png":"/img/eh.png "}alt=""/> 
+    <img className="FavImg" onClick={onClickFav} src={isFav?"/img/fh.png":"/img/eh.png "}alt=""/> 
     </button>
   
-    <button className="BuyBtn">Add to cart</button>
+    <button className="BuyBtn"  onClick={onClickBuy} >Add to cart</button>
   
     </div>
 
