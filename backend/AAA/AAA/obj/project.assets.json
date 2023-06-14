@@ -3443,11 +3443,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Stankin programming\\Semestr 4\\AAA\\AAA\\AAA.csproj",
+      "projectUniqueName": "D:\\Git\\PavelVasilchikov\\Stankin-Project\\backend\\AAA\\AAA\\AAA.csproj",
       "projectName": "AAA",
-      "projectPath": "D:\\Stankin programming\\Semestr 4\\AAA\\AAA\\AAA.csproj",
+      "projectPath": "D:\\Git\\PavelVasilchikov\\Stankin-Project\\backend\\AAA\\AAA\\AAA.csproj",
       "packagesPath": "C:\\Users\\Павел\\.nuget\\packages\\",
-      "outputPath": "D:\\Stankin programming\\Semestr 4\\AAA\\AAA\\obj\\",
+      "outputPath": "D:\\Git\\PavelVasilchikov\\Stankin-Project\\backend\\AAA\\AAA\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

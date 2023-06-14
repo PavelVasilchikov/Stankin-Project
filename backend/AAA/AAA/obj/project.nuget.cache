@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gUFQduT8dopkYugFq89yVxFNrfuYhVmy9LqwpBrWydPxF07OKiSwI3l5gbD4GTZFPHq6Dt1ztVImNQxoW9HT3Q==",
+  "dgSpecHash": "kbswuoEZrpKLzflzysrw8hN391qnZTPW/YCsLrfwsvE8nxdZ2SqG8VW0tH/VfZ5xZyi49k8Uu2FMXTFoCSHENA==",
   "success": true,
-  "projectFilePath": "D:\\Stankin programming\\Semestr 4\\AAA\\AAA\\AAA.csproj",
+  "projectFilePath": "D:\\Git\\PavelVasilchikov\\Stankin-Project\\backend\\AAA\\AAA\\AAA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Павел\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Павел\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
