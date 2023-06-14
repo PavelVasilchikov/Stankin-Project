@@ -120,6 +120,12 @@ margin-bottom: 35px;
   object-fit: cover;
   transition: transform 0.5s;
  }
+ .allProdImg{
+  max-width:415px;
+  max-height:304px;
+  object-fit: cover;
+  transition: transform 0.5s;
+ }
 
  .card s{
   font-family:'Viga';
