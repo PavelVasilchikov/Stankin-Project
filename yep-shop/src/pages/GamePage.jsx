@@ -1,18 +1,36 @@
 import React from "react";
 import Favorites from "./Favorites";
 function GamePage({GameDescription,gameid,title,altprice,imageUrl,price,onClickBuyBtn,onClickFavBtn}){
- 
+  const userId=localStorage.getItem("userId");
   const[isAdd,setIsAdd]=React.useState();
 const onClickBuy=()=>{
+  if (!userId){
+    window.location.href="/autorization";
+  }else{
   onClickBuyBtn({gameid,title,price,imageUrl});
+  }
 }
 
 
-  const[isFav,setIsAddFav]=React.useState(false);
-  const onClickFav=()=>{
+
+
+   const onClickFav=()=>{
+    if (!userId){
+      window.location.href="/autorization";
+    }else{
     onClickFavBtn({gameid,title,price,imageUrl})
-    setIsAddFav(!isFav);
-  }
+    }
+    // 
+    // 
+    //   setIsAddFav(!isFav);
+    //   onClickFavBtn({gameid,title,price,imageUrl})
+    // 
+    // 
+    //   
+    // 
+  
+    
+   }
  
 
 return(
@@ -22,6 +40,7 @@ return(
 
 
   <div class="GamePage">
+    
    <div className="GameBlock">
 
    
@@ -42,7 +61,8 @@ return(
       </div>
    
     <button className="FavBtn">
-    <img className="FavImg" onClick={onClickFav} src={isFav?"/img/fh.png":"/img/eh.png "}alt=""/> 
+    <img className="FavImg" onClick={onClickFav} src="/img/fh.png"alt=""/>   
+    {/* src={isFav?"/img/fh.png":"/img/eh.png "} */}
     </button>
   
     <button className="BuyBtn"  onClick={onClickBuy} >Add to cart</button>

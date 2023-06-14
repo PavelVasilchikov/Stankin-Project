@@ -1,6 +1,43 @@
 import Card from '../components/Card';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 function Favorites({onRemoveFav,items=[]}){
+
+  const [user, setUser] = useState(null);
+  const userId = localStorage.getItem('userId');
+  
+  
+  useEffect(() => {
+  if (userId) {
+  axios.get(`https://647b4e51d2e5b6101db11d2d.mockapi.io/account/${userId}`).then((res) => {
+  setUser(res.data);
+  }).catch((err) => {
+  console.error(err);
+  alert('Ошибка получения информации');
+  });
+  }
+  }, []);
+  
+  if (!user) {
+  return (<div>
+    <div className="EmptyCart">
+      
+      
+      <div className="mustAutorize">
+      <Link to="/autorization" className="links"> <h2>Please login first</h2>
+          </Link>
+      </div> 
+  
+     
+    </div>
+  
+    
+</div>  )  
+  }
+  
 return(
+  
 <div className="CartItems">
         <h1> Favorite List</h1>
 {items.length>0 ?

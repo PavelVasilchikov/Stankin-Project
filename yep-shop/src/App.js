@@ -4,6 +4,7 @@ import {Route,Routes} from "react-router-dom";
 import Header from './components/Header';
 import React from "react";
 import Home from './pages/Home';
+import Autorization from './pages/Autorization';
 import Drawer from './components/Drawer';
 import DrawerFav from './components/DrawerFav';
 import Favorites from "./pages/Favorites";
@@ -12,8 +13,9 @@ import GamePage from "./pages/GamePage";
 import Cart from "./pages/Cart";
 import axios from "axios";
 import { useEffect } from "react";
-
-
+import PopUpCart from "./components/PopUpCart";
+import Registration from "./pages/Registration";
+import User from "./pages/User";
 
 
 
@@ -27,14 +29,17 @@ const onChangeSearchInput=(event)=>{
   const [favItems,setFavItems]= React.useState([]);
 
   const onAddToFav=(obj)=>{
-    //console.log(obj);
+    obj.id=0;
+    console.log(obj);
+   
     //console.log (favItems)
     if(favItems.find(item=>item.gameid===obj.gameid))
     {
-        alert("alredy in favorites!");
+        alert("alredy in favorites!");  //FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
     }
     else{
-      axios.post('https://647b4e51d2e5b6101db11d2d.mockapi.io/favorites',obj);
+      alert("You have successfully added to favorites")
+      axios.post('https://localhost:7245/Favorites',obj);
       setFavItems(prev=>[...prev,obj]); 
     }
     
@@ -42,23 +47,26 @@ const onChangeSearchInput=(event)=>{
 
   const onRemoveFavorites=(id)=>{
    console.log(id);
-    axios.delete(`https://647b4e51d2e5b6101db11d2d.mockapi.io/favorites/${id}`);  
+    axios.delete(`https://localhost:7245/Favorites/${id}`);  
     setFavItems(prev=>prev.filter(item=>item.id!=id));
 
   }
 
 
   const [cartItems,setCartItems]= React.useState([]);
-
+  const [alreadyInCart,setAlreadyInCart]=React.useState(false)
   const onAddToCart=(obj)=>{
     if(cartItems.find(item=>item.gameid===obj.gameid))
-    {
-        alert("alredy in cart!");// СДЕЛАТЬ СТРАНИЧКУ С ПРЕДЛОЖЕНИЕМ ПЕРЕЙТИ В КОРЗИНУ ИЛИ ПРОДОЛЖИТЬ ПОКУПКИ( ТОЖЕ САМОЕ И ДЛЯ ИЗБРАННОГО)
+    {  
+        alert("alredy in cart!");
+        
     }
     else{
-      console.log (obj.gameid);
+      alert("You have successfully added to cart")
+   obj.id=0;
+   console.log (obj);
       obj.counter=1;
-      axios.post('https://647b4e51d2e5b6101db11d2d.mockapi.io/cart',obj);
+      axios.post('https://localhost:7245/api/Cart',obj);
     
       setCartItems([...cartItems,obj]);
     }
@@ -69,7 +77,7 @@ const onChangeSearchInput=(event)=>{
 
   console.log (id);
   
-    axios.delete(`https://647b4e51d2e5b6101db11d2d.mockapi.io/cart/${id}`);  
+    axios.delete(`https://localhost:7245/api/Cart/${id}`);  
   
     setCartItems(prev=>prev.filter(item=>item.id!=id));
 
@@ -102,13 +110,13 @@ const onChangeSearchInput=(event)=>{
 }, []);
 
 React.useEffect(() => {
-  axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/cart').then((res) => {setCartItems(res.data);
+  axios.get('https://localhost:7245/api/Cart').then((res) => {setCartItems(res.data);
   });
 
 }, []);
 
 React.useEffect(() => {
-  axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/favorites').then((res) => {setFavItems(res.data);
+  axios.get('https://localhost:7245/Favorites').then((res) => {setFavItems(res.data);
   });
 
 }, []);
@@ -138,16 +146,23 @@ React.useEffect(() => {
  
 
   <Header onChangeSearch={onChangeSearchInput} />
+   { alreadyInCart ? <PopUpCart/>:null}
   <Routes>
 
  
     <Route path="/" element={<Home saleItems={saleItems}  onGameClick={handleGameClick} searchValue={searchValue}/>}>
-      
     </Route>
+<Route path="/autorization" element={<Autorization/>}> 
 
+</Route>
+
+    <Route path="/profile" element={<User favItems={favItems} cartItems={cartItems} />}>
+    </Route>
+    <Route path="/registration" element={<Registration/>}>
+    </Route>
     <Route path="/favorites" element={<Favorites items={favItems} onRemoveFav={onRemoveFavorites} />}>
     </Route>
-    <Route path="/products" element={<Products saleItems={saleItems} onGameClick={handleGameClick} searchValue={searchValue} />}>
+    <Route path="/products" element={<Products saleItems={allProd} onGameClick={handleGameClick} searchValue={searchValue} />}>
     </Route>
 
     <Route path="/gamepage" element={ selectedGame && <GamePage GameDescription={Description} gameid={selectedGame.id} title={selectedGame.title} price={selectedGame.price}  imageUrl={selectedGame.imageUrl} altprice={selectedGame.altprice}   onClickBuyBtn={(obj)=>onAddToCart(obj)}  onClickFavBtn={(obj)=>onAddToFav(obj)}/>}>

@@ -14,8 +14,8 @@ namespace AAA.Models
         public long price { get; set; }
         [Required]
         public string? imageUrl { get; set; }
-
-
+        [Required]
+        public int gameid { get; set; }
         [Required]
         public int counter { get; set; }
       
