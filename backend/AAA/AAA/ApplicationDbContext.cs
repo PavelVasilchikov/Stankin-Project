@@ -10,6 +10,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<AllProductsList> AllProductsLists { get; set; } = null!;
     public DbSet<Cart> Cart { get; set; } = null!;
     public DbSet<Favorites> Favorites { get; set; } = null!;
+    public DbSet<Orders> Orders { get; set; } = null!;
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
