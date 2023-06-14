@@ -26,7 +26,7 @@ namespace AAA.Controllers
         [HttpGet("{id}")]
         public ActionResult<AllProductsList> GetById(int id)
         {
-            var product = _context.AllProductsLists.FirstOrDefault(p => p.GameId == id);
+            var product = _context.AllProductsLists.FirstOrDefault(p => p.id == id);
 
             if (product == null)
             {
@@ -47,13 +47,13 @@ namespace AAA.Controllers
             _context.AllProductsLists.Add(product);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(GetById), new { id = product.GameId }, product);
+            return CreatedAtAction(nameof(GetById), new { id = product.id }, product);
         }
 
         [HttpPut("{id}")]
         public IActionResult Update(int id, AllProductsList product)
         {
-            if (id != product.GameId)
+            if (id != product.id)
             {
                 return BadRequest();
             }
@@ -67,7 +67,7 @@ namespace AAA.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var product = _context.AllProductsLists.FirstOrDefault(p => p.GameId == id);
+            var product = _context.AllProductsLists.FirstOrDefault(p => p.id == id);
 
             if (product == null)
             {
