@@ -20,6 +20,6 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=localhost;Database=Users;Trusted_Connection=True; TrustServerCertificate=true");
+        optionsBuilder.UseSqlServer("Server=LAPTOP-2G2QH5OP;Database=Users;Trusted_Connection=True; TrustServerCertificate=true");
     }
 }

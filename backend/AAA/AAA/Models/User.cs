@@ -7,11 +7,17 @@ namespace AAA.Models
     public class User
     {
         [Key]
-        public int userId { get; set; }
+        public int id { get; set; }
         [Required]
-        public string? userName { get; set; }
+        public string? email { get; set; }
         [Required]
-        public string? userPassword { get; set; }
-        
+        public string? password { get; set; }
+        [Required]
+        public string? name { get; set; }
+        [Required]
+        public string? login { get; set; }
+        [Required]
+        public string? Steam { get; set; }
+
     }
 }
