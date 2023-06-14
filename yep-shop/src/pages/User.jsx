@@ -10,7 +10,7 @@ const userId = localStorage.getItem('userId');
 
 useEffect(() => {
 if (userId) {
-axios.get(`https://647b4e51d2e5b6101db11d2d.mockapi.io/account/${userId}`).then((res) => {
+axios.get(`https://localhost:7245/User/${userId}`).then((res) => {
 setUser(res.data);
 }).catch((err) => {
 console.error(err);

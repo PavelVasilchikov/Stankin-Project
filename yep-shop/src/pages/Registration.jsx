@@ -10,14 +10,14 @@ const [name, setName] = React.useState('');
 const [login, setLogin] = React.useState('');
 
 
-
 const handleLogin1 = (e) => {
 e.preventDefault();
-axios.post('https://647b4e51d2e5b6101db11d2d.mockapi.io/account', {
+axios.post('https://localhost:7245/User', {
 email,
 password,
 name,
 login,
+Steam,
 
 }).then((res) => {
 localStorage.setItem('token', res.data.token);

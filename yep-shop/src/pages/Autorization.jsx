@@ -9,7 +9,7 @@ function Autorization() {
     const [user, setUser] = useState(null);
     
     useEffect(() => {
-    axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/account').then((res) => {
+    axios.get('https://localhost:7245/User').then((res) => {
     setUsers(res.data);
     }).catch((err) => {
     console.error(err);
