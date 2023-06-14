@@ -595,3 +595,17 @@ font-family: 'Viga';
   background-color: #ff5f5f;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+.userdiv{
+  font-size: 22px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.OrderBtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

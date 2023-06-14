@@ -16,8 +16,7 @@ namespace AAA.Models
         public string? name { get; set; }
         [Required]
         public string? login { get; set; }
-        [Required]
-        public string? Steam { get; set; }
+       
 
     }
 }

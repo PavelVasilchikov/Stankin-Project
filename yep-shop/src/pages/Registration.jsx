@@ -17,7 +17,6 @@ email,
 password,
 name,
 login,
-Steam,
 
 }).then((res) => {
 localStorage.setItem('token', res.data.token);

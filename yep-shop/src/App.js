@@ -16,7 +16,7 @@ import { useEffect } from "react";
 import PopUpCart from "./components/PopUpCart";
 import Registration from "./pages/Registration";
 import User from "./pages/User";
-
+import Orders from "./pages/Orders";
 
 
 function App() {  
@@ -29,7 +29,7 @@ const onChangeSearchInput=(event)=>{
   const [favItems,setFavItems]= React.useState([]);
 
   const onAddToFav=(obj)=>{
-    obj.id=0;
+    //obj.id=0;
     console.log(obj);
    
     //console.log (favItems)
@@ -165,6 +165,9 @@ React.useEffect(() => {
     <Route path="/products" element={<Products saleItems={allProd} onGameClick={handleGameClick} searchValue={searchValue} />}>
     </Route>
 
+    <Route path="/orders" element={<Orders/>}>
+
+    </Route>
     <Route path="/gamepage" element={ selectedGame && <GamePage GameDescription={Description} gameid={selectedGame.id} title={selectedGame.title} price={selectedGame.price}  imageUrl={selectedGame.imageUrl} altprice={selectedGame.altprice}   onClickBuyBtn={(obj)=>onAddToCart(obj)}  onClickFavBtn={(obj)=>onAddToFav(obj)}/>}>
     </Route>
 

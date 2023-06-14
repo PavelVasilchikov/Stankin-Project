@@ -16,7 +16,7 @@ return(
              <div className="card" onClick={()=>onGameClick(game)}> 
              <Link to="/gamepage" className="links"> 
              <button> 
-             <img src={game.imageUrl} alt=""/>
+             <img className="allProdImg" src={game.imageUrl} alt=""/>
              <div className="price">
              <s>{game.altprice}p</s>
              <p>{game.price}p</p>
