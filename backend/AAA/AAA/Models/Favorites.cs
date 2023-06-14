@@ -7,11 +7,11 @@ namespace AAA.Models
     public class Favorites
     {
         [Key]
-        public int? id { get; set; }
+        public int id { get; set; }
         [Required]
         public string? title { get; set; }
         [Required]
-        public long? price { get; set; }
+        public long price { get; set; }
         [Required]
         public string? imageUrl { get; set; }
     }

@@ -36,15 +36,21 @@ return(
     </li>
 
     <li>
-    <Link to="/cart" className="links">
+    <a href="/cart"  className="links">
+      <span className="CartBtn"> Cart </span>
+      </a> 
+    {/* <Link to="/cart" className="links">
     <span className="CartBtn"> Cart </span>
-    </Link>
+    </Link>  */}
     </li >
 
     <li >
-    <Link to="/favorites" className="links">
+    <a href="/favorites"  className="links">
+      <span className="CartBtn"> Favorites </span>
+      </a>
+    {/* <Link to="/favorites" className="links">
     <span> Favorites </span>
-    </Link>
+    </Link> */}
     </li>
 
   </ul>

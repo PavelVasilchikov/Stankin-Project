@@ -1,16 +1,16 @@
 import React from "react";
 import Favorites from "./Favorites";
-function GamePage({GameDescription,title,altprice,imageUrl,price,onClickBuyBtn,onClickFavBtn}){
+function GamePage({GameDescription,gameid,title,altprice,imageUrl,price,onClickBuyBtn,onClickFavBtn}){
  
   const[isAdd,setIsAdd]=React.useState();
 const onClickBuy=()=>{
-  onClickBuyBtn({title,price,imageUrl});
+  onClickBuyBtn({gameid,title,price,imageUrl});
 }
 
 
   const[isFav,setIsAddFav]=React.useState(false);
   const onClickFav=()=>{
-    onClickFavBtn({title,price,imageUrl})
+    onClickFavBtn({gameid,title,price,imageUrl})
     setIsAddFav(!isFav);
   }
  

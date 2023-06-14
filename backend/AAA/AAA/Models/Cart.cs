@@ -15,5 +15,9 @@ namespace AAA.Models
         [Required]
         public string? imageUrl { get; set; }
 
+
+        [Required]
+        public int counter { get; set; }
+      
     }
 }

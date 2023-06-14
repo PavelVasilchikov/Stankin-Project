@@ -19,7 +19,6 @@ function Drawer({onClose,items=[]}){
         ))}
         </div>
 
-
         <div сlassName="cartTotalBlock">
         <ul>
           <li className="liSumm">

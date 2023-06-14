@@ -1,25 +1,62 @@
 import {Link} from "react-router-dom";
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 function Cart( {onRemoveBuy,items=[]} ){
   
     let [newSumm,setNewSumm]=useState(0);
     let [newObj, setNewObj] = useState();
+    // let[total,setTotal]=useState({ 
+    //  summ:items.reduce((prev,curr)=>{return prev+curr.price*curr.counter},0),
+    //  count:items.reduce((prev,curr)=>{return prev+curr.counter},0),
+    //  tax: Math.round(items.reduce((prev,curr)=>{return prev+curr.price*curr.counter},0) * 0.05)
+    // })
+
+
+
+    
+    const initialTotal = JSON.parse(localStorage.getItem('total')) || {
+  };
+
+  const [total, setTotal] = useState(initialTotal);
+
+  useEffect(() => {
+    // Вычисляем новое значение total при изменении items
+    const newTotal = {
+      summ: items.reduce((prev, curr) => prev + curr.price * curr.counter, 0),
+      count: items.reduce((prev, curr) => prev + curr.counter, 0),
+      tax: Math.round(items.reduce((prev, curr) => prev + curr.price * curr.counter, 0) * 0.05),
+    };
+    setTotal(newTotal);
+
+    // Сохраняем значение в localStorage
+    localStorage.setItem('total', JSON.stringify(newTotal));
+  }, [items]);
+
+
+
+
     function incrementCounter({obj}) {
+   
      obj.counter+=1;
      newObj=setNewObj( obj.counter)
-
+     const newSumm=items.reduce((prev,curr)=>{return prev+curr.price*curr.counter},0);
+     const newCount=items.reduce((prev,curr)=>{return prev+curr.counter},0);
+     const newTax = Math.round(newSumm * 0.05);
+    setTotal({count:newCount,summ:newSumm,tax:newTax})
      console.log(obj.counter);
+     console.log(total)
     }
     function decrementCounter({obj}) 
     {  
       obj.counter = obj.counter > 1 ? obj.counter - 1 : 1; 
       newObj=setNewObj( obj.counter)
-      console.log(obj.counter);
+      const newSumm=items.reduce((prev,curr)=>{return prev+curr.price*curr.counter},0);
+      const newCount=items.reduce((prev,curr)=>{return prev+curr.counter},0);
+      const newTax = Math.round(newSumm * 0.05);
+      setTotal({count:newCount,summ:newSumm,tax:newTax})
+            console.log(obj.counter);
     }
-     function cartSummary({obj})
-     {
-      newSumm=setNewSumm(newSumm+obj.price*obj.counter);
-     }
+   
 
 return(
     
@@ -34,7 +71,9 @@ return(
           <img width={180} height={130}  src={obj.imageUrl} alt=""/>
           <div>
             <p> {obj.title} </p>
-            <p>{obj.price*obj.counter}p</p>
+         
+           
+            <p>{obj.price*obj.counter} p</p>
           </div>
 
             <div className="counter">
@@ -47,32 +86,43 @@ return(
           </div>
         ))}
         </div>
+
+
          <div сlassName="cartTotalBlock">
-         <ul>
            <li className="liSumm">
-
-
-       
-
              <span>Summ: </span>
-             <div className="divSumm"></div>
-             <b></b>
-           </li>  
-           <li className="liTax"> 
-           <span>tax 5%:</span>
              <div className="divTax"></div>
-             <b>50р</b>
+             <b> {total.summ}p</b>
+           </li>  
+           <li className="liSumm">
+             <span>Items: </span>
+             <div className="divTax"></div>
+             <b> {total.count}</b>
+           </li> 
+           <li className="liSumm"> 
+           <span>Tax 5%:</span>
+           <div className="divTax"></div>
+             <b>{total.tax}</b>
            </li>
-           <button className="OrderBtn"> Confirm Order</button>
-         </ul>
+          
+            <div className="OrderButton">
+            <button className="OrderBtn"> Confirm Order</button>    
+            </div>
+         
          </div>
 
             
           </div>
         
         :
-        <div>
+        <div className="EmptyCart">
+          
+          <div >
+          <img width={300} height={200} src="img/empty-cart.svg" alt=""/>
             <p>YOUR CART IS EMPTY</p>
+
+          </div>
+          
 
 
         </div>
