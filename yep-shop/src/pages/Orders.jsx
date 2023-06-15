@@ -4,11 +4,10 @@ import axios from 'axios';
 import React from "react";
 import { useState, useEffect } from 'react';
 
-
 function Orders(){
     const [orders,setOrders]= React.useState([]);
     React.useEffect(() => {
-        axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/orders').then((res) => {setOrders(res.data);
+        axios.get('https://localhost:7245/api/Orders').then((res) => {setOrders(res.data);
         });
     }, []);
 return(

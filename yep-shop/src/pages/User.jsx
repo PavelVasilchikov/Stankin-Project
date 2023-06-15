@@ -8,7 +8,7 @@ const [user, setUser] = useState(null);
 const userId = localStorage.getItem('userId');
 const [orders,setOrders]= React.useState([]);
 React.useEffect(() => {
-    axios.get('https://647b4e51d2e5b6101db11d2d.mockapi.io/orders').then((res) => {setOrders(res.data);
+    axios.get('https://localhost:7245/api/Orders').then((res) => {setOrders(res.data);
     });
 }, []);
 
@@ -55,7 +55,7 @@ const Exit = async () => {
     }
      for (let i = 0; i < orders.length; i++) {
      const item = orders[i];
-     await axios.delete('https://647b4e51d2e5b6101db11d2d.mockapi.io/orders/' + item.id);
+     await axios.delete('https://localhost:7245/api/Orders/' + item.id);
     }
     localStorage.removeItem('userId'); 
     localStorage.removeItem('userLogin'); 

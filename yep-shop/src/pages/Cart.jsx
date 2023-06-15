@@ -13,8 +13,11 @@ function Cart( {onRemoveBuy,items=[]} ){
   
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
-        await axios.post('https://647b4e51d2e5b6101db11d2d.mockapi.io/orders', item);
-        // await  delay(500);
+        //item.id=0;
+        console.log(item);
+        await axios.post('https://localhost:7245/api/Orders', item);
+        //await axios.post('https://647b4e51d2e5b6101db11d2d.mockapi.io/orders', item);
+        //await  delay(500);
     }
   
     for (let i = 0; i < items.length; i++) {
@@ -57,7 +60,7 @@ function Cart( {onRemoveBuy,items=[]} ){
 
   useEffect(() => {
     if (userId) {
-    axios.get(`https://647b4e51d2e5b6101db11d2d.mockapi.io/account/${userId}`).then((res) => {
+    axios.get(`https://localhost:7245/User/${userId}`).then((res) => {
     setUser(res.data);
     }).catch((err) => {
     console.error(err);
